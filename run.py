@@ -1,67 +1,35 @@
+from text_utils import print_sharkfin_logo, print_rules, print_game_over
+from game_utils import game, list_of_words
+from random import choice
 
-def sharkfin_logo():
-    """
-    Logo for the game. Generated with: https://patorjk.com/
-    """
-    print("""
-        
-  /$$$$$$  /$$                           /$$             /$$$$$$$$ /$$          
- /$$__  $$| $$                          | $$            | $$_____/|__/          
-| $$  \__/| $$$$$$$   /$$$$$$   /$$$$$$ | $$   /$$      | $$       /$$ /$$$$$$$ 
-|  $$$$$$ | $$__  $$ |____  $$ /$$__  $$| $$  /$$/      | $$$$$   | $$| $$__  $$
- \____  $$| $$  \ $$  /$$$$$$$| $$  \__/| $$$$$$/       | $$__/   | $$| $$  \ $$
- /$$  \ $$| $$  | $$ /$$__  $$| $$      | $$_  $$       | $$      | $$| $$  | $$
-|  $$$$$$/| $$  | $$|  $$$$$$$| $$      | $$ \  $$      | $$      | $$| $$  | $$
- \______/ |__/  |__/ \_______/|__/      |__/  \__/      |__/      |__/|__/  |__/
-                                                                                
-                                                                                
-                                                                                
+print_sharkfin_logo()
 
+name = input("Welcome to sharkfin, enter your name to get started: ")
+print("Hello,", name)
 
-    """)
+game_over = False
+quit_game = False
+won = False
+word= ""
 
-sharkfin_logo()
+while not quit_game:
+    print("1. (R)ules")
+    print("2. (S)tart Game")
+    print("3. E(x)it")
 
-if guessed:
-        print(Style.GREEN + """
-        
+    option = input("Enter an option: ").lower()
 
- /$$     /$$                        /$$      /$$ /$$           /$$
-|  $$   /$$/                       | $$  /$ | $$|__/          | $$
- \  $$ /$$//$$$$$$  /$$   /$$      | $$ /$$$| $$ /$$ /$$$$$$$ | $$
-  \  $$$$//$$__  $$| $$  | $$      | $$/$$ $$ $$| $$| $$__  $$| $$
-   \  $$/| $$  \ $$| $$  | $$      | $$$$_  $$$$| $$| $$  \ $$|__/
-    | $$ | $$  | $$| $$  | $$      | $$$/ \  $$$| $$| $$  | $$    
-    | $$ |  $$$$$$/|  $$$$$$/      | $$/   \  $$| $$| $$  | $$ /$$
-    |__/  \______/  \______/       |__/     \__/|__/|__/  |__/|__/
-                                                                  
-    
-       
-        """ + Style.RESET)
-        print(Style.GREEN + f"""
-You guessed the word! You win, {name}!
-        """ + Style.RESET)
+    if option == "r":
+        print_rules()
+    elif option == "s":
+        word = choice(list_of_words)
+        won = game(word)
+        game_over = True
+        quit_game = True
+    elif option == "x":
+        quit_game = True
     else:
-        print(Style.RED + """
-      
+        print("invalid input, try again..")
 
-
- /$$     /$$                        /$$                                     /$$
-|  $$   /$$/                       | $$                                    | $$
- \  $$ /$$//$$$$$$  /$$   /$$      | $$        /$$$$$$   /$$$$$$$  /$$$$$$ | $$
-  \  $$$$//$$__  $$| $$  | $$      | $$       /$$__  $$ /$$_____/ /$$__  $$| $$
-   \  $$/| $$  \ $$| $$  | $$      | $$      | $$  \ $$|  $$$$$$ | $$$$$$$$|__/
-    | $$ | $$  | $$| $$  | $$      | $$      | $$  | $$ \____  $$| $$_____/    
-    | $$ |  $$$$$$/|  $$$$$$/      | $$$$$$$$|  $$$$$$/ /$$$$$$$/|  $$$$$$$ /$$
-    |__/  \______/  \______/       |________/ \______/ |_______/  \_______/|__/
-                                                                                                                                                          
-                                                                              
-        """ + Style.RESET)
-        print(Style.RED + f"""
-Sorry {name}, you lost... The word was: {word}.
-        """ + Style.RESET)
-
-
-                                                              
-                                                                  
-
+if game_over:   
+    print_game_over(word, won)

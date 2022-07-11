@@ -19,12 +19,14 @@ def print_sharkfin_logo():
 
     """)
 
+
 def print_rules():
     print("""
-1. dont fuck it up
+1. rule 1 here
 2. good luck    
 
     """)
+
 
 def print_game_over(word, win=False):
 
@@ -64,6 +66,6 @@ def print_game_over(word, win=False):
                                                                                 
             """)
         print(f"""
-    Sorry test, you lost... The word was: word.
+    Sorry test, you lost... The word was: {word}.
             """)
 

@@ -10,7 +10,6 @@ print("Hello,", name)
 game_over = False
 quit_game = False
 won = False
-word= ""
 
 while not quit_game:
     print("1. (R)ules")

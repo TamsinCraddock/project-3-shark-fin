@@ -1,34 +1,52 @@
+"""
+Shark Fin Game entry point.
+"""
+
+from random import choice
 from text_utils import print_sharkfin_logo, print_rules, print_game_over
 from game_utils import game, list_of_words
-from random import choice
 
-print_sharkfin_logo()
 
-name = input("Welcome to sharkfin, enter your name to get started: ")
-print("Hello,", name)
+def run():
+    """
+    Runs the game
+    """
+    print_sharkfin_logo()
 
-game_over = False
-quit_game = False
-won = False
+    name = input("Welcome to sharkfin, enter your name to get started: ")
+    print("Hello,", name)
 
-while not quit_game:
-    print("1. (R)ules")
-    print("2. (S)tart Game")
-    print("3. E(x)it")
+    game_over = False
+    quit_game = False
+    won = False
 
-    option = input("Enter an option: ").lower()
+    while not quit_game:
+        print("1. Rules")
+        print("2. Start Game")
+        print("0. Exit")
 
-    if option == "r":
-        print_rules()
-    elif option == "s":
-        word = choice(list_of_words)
-        won = game(word)
-        game_over = True
-        quit_game = True
-    elif option == "x":
-        quit_game = True
-    else:
-        print("invalid input, try again..")
+        option = input("Enter an option: ")
 
-if game_over:   
-    print_game_over(word, won)
+        if not option.isnumeric():
+            print("invalid choice, choose a number from the list.")
+            continue
+
+        option = int(option)
+
+        if option == 1:
+            print_rules()
+        elif option == 2:
+            word = choice(list_of_words)
+            won = game(word)
+            game_over = True
+            quit_game = True
+        elif option == 0:
+            quit_game = True
+        else:
+            print("invalid input, try again..")
+
+    if game_over:
+        print_game_over(word, won)
+
+
+run()

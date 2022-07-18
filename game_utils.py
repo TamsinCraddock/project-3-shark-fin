@@ -1,4 +1,13 @@
+"""
+Set of utils to control game flow
+
+"""
+
 import re
+from text_utils import display_shark_fin
+TRIES_ALLOWED = 5
+
+
 def game(word):
     """
     Starts the game
@@ -6,7 +15,6 @@ def game(word):
     Returns:
         Bool: won or lost
     """
-    tries_allowed = 5
     tries = 0
     prompt = ""
     tempword = word
@@ -24,9 +32,9 @@ def game(word):
         indices = [i.start() for i in re.finditer(guess, tempword)]
         if len(indices) < 1:
             tries = tries + 1
-            print(f"Incorrect, try again - {tries_allowed - tries} remaining")
-            # make sharks move up
-            if tries >= tries_allowed:
+            print(f"Incorrect, try again - {TRIES_ALLOWED - tries} remaining")
+            display_shark_fin(tries)
+            if tries >= TRIES_ALLOWED:
                 done = True
             continue
         for i in indices:

@@ -1,31 +1,31 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Shark Fin
 
-Welcome TamsinCraddock,
+Shark Fin is a word challenge game. A simple game that is played in the command line. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This game is a modern take on the traditional 'Hangman' version. 
 
-## Reminders
+The aim of the game is to guess a random word by entering one letter at a time. You have a limited number of attempts. If you manage to guess the correct word before you run out of attempts, you win, otherwise the shrk catches you and you lose.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+The game concept is simple, but it is a challenging game. It's a great way to sit back, relax and challenge yourself. Enjoy!
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Contents:
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## User Experience:
+### User requirements:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+#### As a user I expect:
 
-Connect your GitHub repository and deploy as normal.
+- to understand how the game works quickly.
+- feedback while playing the game.
+- to be able to restart the game easily.
+- text that is easy to read.
+- color that helps me understand the feedback.
+- to be able to access the game rules easily.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+### How Shark Fin works:
+- The program chooses one word randomly from the list with 500 different words.
+- The word is presented as dashes, one for each letter in the word.
+- It is only allowed to guess one letter at a time. The Shark Fin dosn't move forward if it's a correct guess.
+- 

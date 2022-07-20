@@ -37,7 +37,7 @@ def print_rules():
     """)
 
 
-def print_game_over(word, win=False):
+def print_game_over(name, word, win=False):
     """
     Displays the game over message
     """
@@ -57,8 +57,8 @@ def print_game_over(word, win=False):
 
 
         """)
-        print("""
-    You guessed the word! You win, test!
+        print(f"""
+    You correctly guessed the word '{word}'! You win, {name}!
             """)
     else:
         print("""
@@ -77,7 +77,7 @@ def print_game_over(word, win=False):
 
             """)
         print(f"""
-    Sorry test, you lost... The word was: {word}.
+    Sorry {name}, you lost... The word was '{word}'.
             """)
 
 

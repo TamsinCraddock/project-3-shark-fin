@@ -22,13 +22,18 @@ def game(word):
         prompt = prompt + "_"
     done = False
     win = False
+    guesses = set()
     while not done:
         print(prompt)
         raw_guess = input("Enter a guess: ").lower()
         if not len(raw_guess) == 1 or not raw_guess[0].isalpha():
             print("invalid input, please enter a single letter")
             continue
-        guess = raw_guess[0]       
+        guess = raw_guess[0]
+        if guess in guesses:
+            print("Already guessed, try again")
+            continue
+        guesses.add(guess)
         indices = [i.start() for i in re.finditer(guess, tempword)]
         if len(indices) < 1:
             tries = tries + 1

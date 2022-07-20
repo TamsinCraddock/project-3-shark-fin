@@ -46,7 +46,7 @@ def run():
             print("invalid input, try again..")
 
     if game_over:
-        print_game_over(word, won)
+        print_game_over(name, word, won)
 
 
 run()

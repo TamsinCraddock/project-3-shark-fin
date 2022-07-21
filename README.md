@@ -8,57 +8,67 @@ The aim of the game is to guess a random word by entering one letter at a time. 
 
 The game concept is simple, but it is a challenging game. It's a great way to sit back, relax and challenge yourself. Enjoy!
 
-![Shark Fin game display](assets/shark-fin-responsiveness-layout.png)
+![Shark Fin game display](assets/images/shark-fin-responsiveness-layout.png)
 
 
 ---
 
 
 ## **Contents:**
-- User Experience:
-    - User Requirements:
-        - As a user, I expect:
-        - How Shark Fin works:
-    - Wireframes/ Flowchart:
-    - Design:
-- Features:
-    - Existing Features:
-        - Start:
+- [User Experience:](#user-experience)
+    - [User Requirements:](#user-requirements)
+        - User stories
+        - Owner goals
+        - How Shark Fin works
+    - [Wireframes/ Flowchart:](#Wireframes/Flowchart)
+    - [Design](#design)
+- [Features:](#features)
+    - [Existing Features:](#existing-features)
+        - Start
         - Menu:
-        - Rules of the game:
-        - Playing the game:
-        - Guessing the same letter:
-        - End of game:
-    - Future features:
-- Technologies used:
-    - Main language:
-    - Other Frameworks, Libraries and Software Used:
-- Testing:
-    - Manual testing:
-    - Input validation:
-    - Validator testing:
-- Bugs:
-    - Solved:
-    - Left to solve:
-- Deployment:
-- Credits:
+        - Rules of the game
+        - Playing the game
+        - Guessing the same letter
+        - End of game
+    - [Future features:](#future-features)
+- [Technologies used:](#technologies-used)
+    - [Main language](#main-language)
+    - [Other Frameworks, Libraries and Software Used](#other-frameworks-libraries-and-software-used)
+- [Testing:](#testing)
+    - [Manual testing](#manual-testing)
+    - [Input validation](#input-validation)
+    - [Validator testing](#validator-testing)
+- [Bugs:](#bugs)
+    - [Solved](#solved)
+    - [Left to solve](#left-to-solve)
+- [Deployment:](#Deployment)
+- [Credits:](#Credits)
 
 ----
 
 ## **User Experience:** 
 ### User requirements:
 
-#### As a user, I expect:
+#### **User stories**
 
+As a user, I expect:
 - to understand how the game works quickly.
+- the program to be simple to use and easy to understand.
 - feedback while playing the game.
 - to be able to restart the game easily.
 - text that is easy to read.
 - color that helps me understand the feedback.
 - to be able to access the game rules easily.
 
+### Owner goals:
+
+As a owner, I aim to:
+- provide a program that fulfils the users' needs.
+- create a game that is easy to use & understand.
+- create an experience that is pleasant for users.
+
 ### How Shark Fin works:
-- The program chooses one word randomly from the list with 500 different words.
+- The program chooses one word randomly from the list with 2500 different words.
 - The word is presented as dashes, one for each letter in the word.
 - It is only allowed to guess one letter at a time. The Shark Fin dosn't move forward if it's a correct guess.
 - When the players guess is wrong, the game will notify the player and the Shark Fin graphic will change to be one step closer to the swimming person. 
@@ -70,11 +80,13 @@ The game concept is simple, but it is a challenging game. It's a great way to si
 ## **Wireframes/ Flowchart:**
 As this game only is played in the terminal, no wireframes for the visual was done before the project started. I did a simple flowchart to guide me through the coding and to get a map for how I wanted it to work.
 
-![Shark Fin game plan flow chart](assets/sharkfin-flow-chart.jpg)
+![Shark Fin game plan flow chart](assets/images/sharkfin-flow-chart.jpg)
 
 
 ## **Design:**
-The design is very limited in this because it's played through the terminal. I have put some color and ASCII-art in it to make it look more appealing. This also helps with the feedback as the text is in different color for when you guess right or wrong for example.
+The program has been designed based on the five planes of content strategy. Although it is a terminal application and therefore differs somewhat from web design, each plane still applies in some way.
+
+The design is very limited due to the game being played through the terminal. I have put some color and ASCII-art in it to add to the overall design and user experience. This also helps with the user feedback as the text colour used changes dependingon the game output.
 
 
 ## **Features:**
@@ -83,20 +95,36 @@ The design is very limited in this because it's played through the terminal. I h
 #### Start: 
 When you start the game you will be able to enter your name. This is for personal feedback through the game.
 
- ![Shark Fin game start](assets/shark-fin-game-start.png)
+ ![Shark Fin game start](assets/images/shark-fin-game-start.png)
 
  #### Menu: 
- In the next step you have two choices. Start the game or read the rules.
+ In the next step you have three choices:
+ 1. Rules
+ 2. Start Game
+ 0. Exit
 
- ![Shark Fin game menu](assets/shark-fin-game-menu.png)
+ ![Shark Fin game menu](assets/images/shark-fin-game-menu.png)
 
  #### Rules of the game:
- A short explanation of the rules and stes of the game with the possibility to return to the main menu by hitting enter.
+ A short explanation of the rules and how to play the game is displayed. The user will also have the option to choose how they would like to proceed following reading or the rules. They will either be able to start the game or exit.
 
- [image]
+Rules of the game:
+1. The game will automatically generate a random word.
+2. The amount of letters that the word contains is shown by the amount of blank tiles.
+3. Guess one letter in each turn.
+4. If you guess a correct letter that the word contains, the letter will display on the relevant tiles within the word.
+5. If the guess is correct, the shark will remain in the same position and you can guess another letter.
+6. If the guess is incorrect, the shark fin will move one step closer to the swimming person.
+7. Once the shark fin reaches the swimming person, you lose.
+8. Good luck!
+
+
+ ![Shark Fin game rules](assets/images/shar-fin-game-rules.png)
 
  #### Playing the game:
  - When playing the game you receive feedback in green when the guess is correct. Along with the letter in the correct position.
+
+[image]
 
 - If you guess wrong, it will notify you in red text along with a graphic ofthe shark fin moving closer to the swimming person.
 
@@ -148,17 +176,17 @@ I also asked two friends to test the game to get an outside opinion on the funct
 
 [image]
 
-- When choosing 1 or 2 in the meny it validates that, if you put something else in it will tell you that you need to choose 1 or 2.
+- When choosing 1 or 2 in the menu, it validates that the user entered a valid input. If you put something else in it will tell you that you need to choose 1 or 2.
 
-[image]
+![Shark Fin invalid choice](assets/images/shark-fin-invalid-choice.png)
 
 - When guessing letters it validates that the input is one letter and nothing else.
 
-[image]
+![Shark Fin invalid option input](assets/images/shark-fin-invalid-option-input.png)
 
 - If you guess same letter twice you will be notified and will be able to try again.
 
-[image]
+![Shark Fin letter already guessed warning](assets/images/shark-fin-letter-already-guessed.png)
 
 ### Validator Testing:
 The code has been tested with PEP8 online. At first there were some warnings about trailing whitespaces and too long lines. But now it passes without any warnings or errors.
@@ -180,12 +208,16 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 ----
 
 ## **Deployment:**
-- This application is deployed using Heroku. [link]
+- This application is deployed using Heroku. 
+    https://shark-fin.herokuapp.com/
+
 
 
 
 ----
 ## **Credits:**
 - The Shark Fin game logo was generated using https://patorjk.com/
+- The list of 2500 random words used was taken from https://www.randomlists.com/
+
 
 

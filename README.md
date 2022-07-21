@@ -191,7 +191,9 @@ Initially I obtained a large number of "line too long" errors & "trailing whites
 ![PEP8 errors](assets/images/text-utils-errors-1.png)
 ![PEP8 errors 2](assets/images/text-utils-errors-2.png)
 
-I spent some time adjusting the code so that the lines were shorter than 80 characters and was able to adjust the ASCII art without affecting the way it displayed. The code then passed through the validator successfully:
+I spent some time adjusting the code so that the lines were shorter than 80 characters and was able to adjust the ASCII art without affecting the way it displayed. The code then passed through the validator successfully.
+
+The validator also highlighted use of anomylous backslashes in the ascii art, as they were not valid escape sequences.  This was fixed by prefixing the strings with 'r' to ignore escape sequences.
 
 ------
 

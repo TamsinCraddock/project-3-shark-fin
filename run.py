@@ -16,37 +16,42 @@ def run():
     name = input("Welcome to sharkfin, enter your name to get started: ")
     print("Hello,", name)
 
-    game_over = False
-    quit_game = False
-    won = False
+    exit_game = False
+    while not exit_game:
+        game_over = False
+        quit_game = False
+        won = False
+        while not quit_game:
+            print("1. Rules")
+            print("2. Start Game")
+            print("0. Exit")
 
-    while not quit_game:
-        print("1. Rules")
-        print("2. Start Game")
-        print("0. Exit")
+            option = input("Enter an option: ")
 
-        option = input("Enter an option: ")
+            if not option.isnumeric():
+                print("invalid choice, choose a number from the list.")
+                continue
 
-        if not option.isnumeric():
-            print("invalid choice, choose a number from the list.")
-            continue
+            option = int(option)
 
-        option = int(option)
+            if option == 1:
+                print_rules()
+            elif option == 2:
+                word = choice(get_list_of_words())
+                won = game(word)
+                game_over = True
+                quit_game = True
+            elif option == 0:
+                quit_game = True
+                exit_game = True
+            else:
+                print("invalid input, try again..")
 
-        if option == 1:
-            print_rules()
-        elif option == 2:
-            word = choice(get_list_of_words())
-            won = game(word)
-            game_over = True
-            quit_game = True
-        elif option == 0:
-            quit_game = True
-        else:
-            print("invalid input, try again..")
-
-    if game_over:
-        print_game_over(name, word, won)
+        if game_over:
+            print_game_over(name, word, won)
+            try_again = input("enter 'y' to try again: ").lower()
+            if try_again != 'y':
+                exit_game = True
 
 
 run()

@@ -11,14 +11,14 @@ def print_sharkfin_logo():
     """
     print("""
 
-  /$$$$$$  /$$                           /$$             /$$$$$$$$ /$$          
- /$$__  $$| $$                          | $$            | $$_____/|__/          
-| $$  \__/| $$$$$$$   /$$$$$$   /$$$$$$ | $$   /$$      | $$       /$$ /$$$$$$$ 
-|  $$$$$$ | $$__  $$ |____  $$ /$$__  $$| $$  /$$/      | $$$$$   | $$| $$__  $$
- \____  $$| $$  \ $$  /$$$$$$$| $$  \__/| $$$$$$/       | $$__/   | $$| $$  \ $$
- /$$  \ $$| $$  | $$ /$$__  $$| $$      | $$_  $$       | $$      | $$| $$  | $$
-|  $$$$$$/| $$  | $$|  $$$$$$$| $$      | $$ \  $$      | $$      | $$| $$  | $$
- \______/ |__/  |__/ \_______/|__/      |__/  \__/      |__/      |__/|__/  |__/
+  /$$$$$$  /$$                           /$$            /$$$$$$$$ /$$          
+ /$$__  $$| $$                          | $$           | $$_____/|__/          
+| $$  \__/| $$$$$$$   /$$$$$$   /$$$$$$ | $$   /$$     | $$       /$$ /$$$$$$$ 
+|  $$$$$$ | $$__  $$ |____  $$ /$$__  $$| $$  /$$/     | $$$$$   | $$| $$__  $$
+ \____  $$| $$  \ $$  /$$$$$$$| $$  \__/| $$$$$$/      | $$__/   | $$| $$  \ $$
+ /$$  \ $$| $$  | $$ /$$__  $$| $$      | $$_  $$      | $$      | $$| $$  | $$
+|  $$$$$$/| $$  | $$|  $$$$$$$| $$      | $$ \  $$     | $$      | $$| $$  | $$
+ \______/ |__/  |__/ \_______/|__/      |__/  \__/     |__/      |__/|__/  |__/
 
 
 
@@ -33,11 +33,15 @@ def print_rules():
     """
     print("""
 1. The game will automatically generate a random word.
-2. The amount of letters that the word contains is shown by the amount of blank tiles.
+2. The amount of letters that the word contains is shown by the amount of
+    blank tiles.
 3. Guess one letter in each turn.
-4. If you guess a correct letter that the word contains, the letter will display on the relevant tiles within the word.
-5. If the guess is correct, the shark will remain in the same position and you can guess another letter.
-6. If the guess is incorrect, the shark fin will move one step closer to the swimming person.
+4. If you guess a correct letter that the word contains, the letter will
+    display on the relevant tiles within the word.
+5. If the guess is correct, the shark will remain in the same position and you
+    can guess another letter.
+6. If the guess is incorrect, the shark fin will move one step closer to the
+    swimming person.
 7. Once the shark fin reaches the swimming person, you lose.
 8. Good luck!
     """)
@@ -84,7 +88,10 @@ def print_game_over(name, word, win=False):
 
 
         """, "green")
-        cprint(f"You correctly guessed the word '{word}'! You win, {name}!\n", "green")
+        cprint(
+            f"You correctly guessed the word '{word}'! You win, {name}!\n",
+            "green"
+        )
     else:
         cprint("""
 
@@ -95,7 +102,7 @@ def print_game_over(name, word, win=False):
  \  $$ /$$//$$$$$$  /$$   /$$      | $$        /$$$$$$   /$$$$$$$  /$$$$$$ | $$
   \  $$$$//$$__  $$| $$  | $$      | $$       /$$__  $$ /$$_____/ /$$__  $$| $$
    \  $$/| $$  \ $$| $$  | $$      | $$      | $$  \ $$|  $$$$$$ | $$$$$$$$|__/
-    | $$ | $$  | $$| $$  | $$      | $$      | $$  | $$ \____  $$| $$_____/    
+    | $$ | $$  | $$| $$  | $$      | $$      | $$  | $$ \____  $$| $$_____/   
     | $$ |  $$$$$$/|  $$$$$$/      | $$$$$$$$|  $$$$$$/ /$$$$$$$/|  $$$$$$$ /$$
     |__/  \______/  \______/       |________/ \______/ |_______/  \_______/|__/
 
@@ -115,7 +122,7 @@ def display_shark_fin(step=1):
      @@    @@                                                @@@
    @@      @@                                                @@@     @@
  @@    ,(   @@        ,(              ,(              ,(      @@    @@@@@
-;,,..,`..--.'  `..--.'`..--.'  `..--.'`..--.'  `..--.'`..--' `.@@-.'.,@@@,.,.,.,..
+;,,..,`..--.'  `..--.'`..--.'  `..--.'`..--.'  `..--.'`..--' `.@@-.'.,@@@,.,.,.
         """)
     elif step == 3:
         print("""
@@ -124,7 +131,7 @@ def display_shark_fin(step=1):
                      @@    @@                                 @@@
                     @@     @@                                 @@@     @@
        ,(         @@  ,(    @@        ,(              ,(       @@    @@@@@
-;,,..,`..--.'`.;.--.'`..--.'  `..--.'`..--.'  `..--.'`..--.' `.@@-.'.,@@@,.,.,.,..
+;,,..,`..--.'`.;.--.'`..--.'  `..--.'`..--.'  `..--.'`..--.' `.@@-.'.,@@@,.,.,.
         """)
     elif step == 4:
         print("""
@@ -133,7 +140,7 @@ def display_shark_fin(step=1):
                                      @@    @@                 @@@
                                     @@     @@                 @@@     @@
              ,(             ,(     @@       @@,(             ,(  @@    @@@@@
-;,,..,`..--.'`...--.'`..--.'  `.-;-.'`..--.'  `..--.'`..--.' `.@@-.'.,@@@,.,.,.,..
+;,,..,`..--.'`...--.'`..--.'  `.-;-.'`..--.'  `..--.'`..--.' `.@@-.'.,@@@,.,.,.
         """)
     elif step == 5:
         print("""
@@ -142,16 +149,16 @@ def display_shark_fin(step=1):
                                                   @@    @@    @@@
                                                  @@     @@    @@@     @@
            ,(             ,(              ,(    @@       @@,(  @@    @@@@@
-,..,`..--.'`...--.'`..--.'  `.--.'`..--.'  `..;--.'`..--.'   `.@@-.'.,@@@,.,.,.,..
+,..,`..--.'`...--.'`..--.'  `.--.'`..--.'  `..;--.'`..--.'   `.@@-.'.,@@@,.,.,.
         """)
         time.sleep(0.75)
         print("""
-                                                                          @                   
-                                                                        @@ @@                  
-                                                                       @@   @@      
-                                                                      @@    @@             
-            ,(               ,(             ,(             ,( ,(    @@       @@,(            
--.'.'`..--.'  `.;,,..,`..--.'`...--.'`..--.'  `.--.'`..--.'  '  `..--.'`..--.'  `.
+                                                                        @
+                                                                      @@ @@
+                                                                     @@   @@
+                                                                    @@    @@
+            ,(               ,(             ,(             ,( ,(  @@       @@
+-.'.'`..--.'  `.;,,..,`..--.'`...--.'`..--.'  `.--.'`..--.'  '  `.-.'`..--.'.,.
         """)
     else:
         print("""
@@ -160,5 +167,5 @@ def display_shark_fin(step=1):
                                                              @@@
                                                              @@@     @@
             ,(        ,(              ,(              ,(      @@    @@@@@
--.'.'`..--.'  `...--.'`..--.'  `..--.'`..--.'  `..--.'`..--' `.@@-.'.,@@@,.,.,.,..
+-.'.'`..--.'  `...--.'`..--.'  `..--.'`..--.'  `..--.'`..--' `.@@-.'.,@@@,.,.,.
         """)

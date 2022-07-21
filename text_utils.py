@@ -44,7 +44,7 @@ def print_rules():
 
 
 def print_incorrect(tries_left):
-    cprint(f"\nIncorrect, try again - {tries_left} remaining\n", "yellow")
+    cprint(f"\nIncorrect, try again - {tries_left} remaining\n", "red")
 
 
 def print_already_guessed():

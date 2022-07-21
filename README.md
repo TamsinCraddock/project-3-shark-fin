@@ -126,7 +126,7 @@ Rules of the game:
 
 [image]
 
-- If you guess wrong, it will notify you in red text along with a graphic ofthe shark fin moving closer to the swimming person.
+- If you guess wrong, it will notify you in red text along with a graphic of the shark fin moving closer to the swimming person.
 
 [image]
 
@@ -137,8 +137,7 @@ Rules of the game:
 [image]
 
 #### End of game:
-
-- When game is finished you will be greeted with different graphics and colors depending on if you win or loose.
+- When game is finished you will be greeted with different graphics depending if you win or loose.
 - You can choose if you want to play again or return to main screen.
 
 ### Future Features:
@@ -153,15 +152,11 @@ Rules of the game:
 - Python
 
 ### Other Frameworks, Libraries and Software Used:
-Python Standard Library (OS and Random)
-OS is used for the colors.
-Random is used for getting a random word from word.txt.
-Figma was used for the flowchart scetch.
-Heroku was used to deploy the live version.
-GitHub was used for storing my repository.
-Gitpod was used to create all files with code.
-Files containing HTML, CSS and JavaScript were all provided by Code Institute for this project.
-??????????
+- [Heroku](https://dashboard.heroku.com) is used to deploy the live app version.
+- [Drawio](https://app.diagrams.net/) was used to create the game funcionality plan and flowchart.
+- [Termcolor 1.1.0](https://pypi.org/project/termcolor/) was used to create the colours within the game.
+- [Github](https://github.com/) is used for source control.
+- [Gitpod](https://gitpod.io) was used to create all files & code.
 
 -----
 
@@ -218,6 +213,9 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 ## **Credits:**
 - The Shark Fin game logo was generated using https://patorjk.com/
 - The list of 2500 random words used was taken from https://www.randomlists.com/
+- The flowchart diagram for the game functionality was drawn using https://app.diagrams.net/ 
+- The colour library used is from Termcolor 1.1.0 https://pypi.org/project/termcolor/
+- Github used for source control https://github.com/
 
 
 

@@ -4,7 +4,7 @@ Set of utils to control game flow
 """
 
 import re
-from text_utils import display_shark_fin
+from text_utils import display_shark_fin, print_invalid_input, print_already_guessed
 TRIES_ALLOWED = 5
 
 
@@ -24,14 +24,14 @@ def game(word):
     win = False
     guesses = set()
     while not done:
-        print(prompt)
+        print(f"{prompt}\n")
         raw_guess = input("Enter a guess: ").lower()
         if not len(raw_guess) == 1 or not raw_guess[0].isalpha():
-            print("invalid input, please enter a single letter")
+            print_invalid_input()
             continue
         guess = raw_guess[0]
         if guess in guesses:
-            print("Already guessed, try again")
+            print_already_guessed()
             continue
         guesses.add(guess)
         indices = [i.start() for i in re.finditer(guess, tempword)]
@@ -53,14 +53,19 @@ def game(word):
 
 
 def get_list_of_words():
-    FILE_PATH = "words.csv"
+    '''
+    retrieve a list of words from a specially prepared CSV file
+
+    Returns:
+        list of strings
+    '''
+    file_path = "words.csv"
     words = []
     try:
-        with open(FILE_PATH) as file:
-            print("parsing csv...\n")
+        with open(file_path) as file:
             for line in file:
                 words.append(line.rstrip("\n"))
     except OSError as error:
-        print(f"Could not read csv file '{FILE_PATH}' error - ", error)
+        print(f"Could not read csv file '{file_path}' error - ", error)
         words = ["fallback"]
     return words

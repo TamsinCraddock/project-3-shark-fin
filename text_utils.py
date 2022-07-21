@@ -2,6 +2,7 @@
 Module which outputs text to screen
 """
 import time
+from termcolor import colored, cprint
 
 
 def print_sharkfin_logo():
@@ -42,12 +43,20 @@ def print_rules():
     """)
 
 
+def print_already_guessed():
+    cprint("\nAlready guessed, try again\n", "yellow")
+
+
+def print_invalid_input():
+    cprint("\ninvalid input, please enter a single letter\n", "yellow")
+
+
 def print_game_over(name, word, win=False):
     """
     Displays the game over message
     """
     if win:
-        print("""
+        cprint("""
 
 
      /$$     /$$                        /$$      /$$ /$$           /$$
@@ -61,12 +70,10 @@ def print_game_over(name, word, win=False):
 
 
 
-        """)
-        print(f"""
-    You correctly guessed the word '{word}'! You win, {name}!
-            """)
+        """, "green")
+        cprint(f"You correctly guessed the word '{word}'! You win, {name}!\n", "green")
     else:
-        print("""
+        cprint("""
 
 
 
@@ -80,10 +87,8 @@ def print_game_over(name, word, win=False):
         |__/  \______/  \______/       |________/ \______/ |_______/  \_______/|__/
 
 
-            """)
-        print(f"""
-    Sorry {name}, you lost... The word was '{word}'.
-            """)
+            """, 'red')
+        cprint(f"Sorry {name}, you lost... The word was '{word}'.\n", 'red')
 
 
 def display_shark_fin(step=1):

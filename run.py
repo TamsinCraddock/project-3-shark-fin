@@ -4,7 +4,7 @@ Shark Fin Game entry point.
 
 from random import choice
 from text_utils import print_sharkfin_logo, print_rules, print_game_over
-from game_utils import game, list_of_words
+from game_utils import game, get_list_of_words
 
 
 def run():
@@ -36,7 +36,7 @@ def run():
         if option == 1:
             print_rules()
         elif option == 2:
-            word = choice(list_of_words)
+            word = choice(get_list_of_words())
             won = game(word)
             game_over = True
             quit_game = True

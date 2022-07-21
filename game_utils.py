@@ -52,9 +52,15 @@ def game(word):
     return win
 
 
-list_of_words = [
-    "cheese",
-    "random",
-    "lamp",
-    "bacon"
-]
+def get_list_of_words():
+    FILE_PATH = "words.csv"
+    words = []
+    try:
+        with open(FILE_PATH) as file:
+            print("parsing csv...\n")
+            for line in file:
+                words.append(line.rstrip("\n"))
+    except OSError as error:
+        print(f"Could not read csv file '{FILE_PATH}' error - ", error)
+        words = ["fallback"]
+    return words

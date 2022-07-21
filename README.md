@@ -8,23 +8,47 @@ The aim of the game is to guess a random word by entering one letter at a time. 
 
 The game concept is simple, but it is a challenging game. It's a great way to sit back, relax and challenge yourself. Enjoy!
 
-[image - responsiveness]
+![Shark Fin game display](assets/shark-fin-responsiveness-layout.png)
 
 
 ---
 
 
-## Contents:
+## **Contents:**
 - User Experience:
-- User Requirements
-- 
+    - User Requirements:
+        - As a user, I expect:
+        - How Shark Fin works:
+    - Wireframes/ Flowchart:
+    - Design:
+- Features:
+    - Existing Features:
+        - Start:
+        - Menu:
+        - Rules of the game:
+        - Playing the game:
+        - Guessing the same letter:
+        - End of game:
+    - Future features:
+- Technologies used:
+    - Main language:
+    - Other Frameworks, Libraries and Software Used:
+- Testing:
+    - Manual testing:
+    - Input validation:
+    - Validator testing:
+- Bugs:
+    - Solved:
+    - Left to solve:
+- Deployment:
+- Credits:
 
 ----
 
-## User Experience:
+## **User Experience:** 
 ### User requirements:
 
-#### As a user I expect:
+#### As a user, I expect:
 
 - to understand how the game works quickly.
 - feedback while playing the game.
@@ -42,17 +66,18 @@ The game concept is simple, but it is a challenging game. It's a great way to si
 - The player loses if the lives runs out. A message will show to tell the game is over.
 - When the game is finished the player can choose to restart, or otherwise return to the starting screen.
 
-### Wireframes/ Flowchart:
+
+## **Wireframes/ Flowchart:**
 As this game only is played in the terminal, no wireframes for the visual was done before the project started. I did a simple flowchart to guide me through the coding and to get a map for how I wanted it to work.
 
-![Shark Fin game plan flow chart](assets/images/sharkfin-flow-chart.jpg)
+![Shark Fin game plan flow chart](assets/sharkfin-flow-chart.jpg)
 
 
-### Design:
+## **Design:**
 The design is very limited in this because it's played through the terminal. I have put some color and ASCII-art in it to make it look more appealing. This also helps with the feedback as the text is in different color for when you guess right or wrong for example.
 
 
-## Features:
+## **Features:**
 ### Existing Features:
 
 #### Start: 
@@ -65,7 +90,7 @@ When you start the game you will be able to enter your name. This is for persona
 
  [image]
 
- #### Rules:
+ #### Rules of the game:
  A short explanation of the rules and stes of the game with the possibility to return to the main menu by hitting enter.
 
  [image]
@@ -88,14 +113,14 @@ When you start the game you will be able to enter your name. This is for persona
 - When game is finished you will be greeted with different graphics and colors depending on if you win or loose.
 - You can choose if you want to play again or return to main screen.
 
-#### Future Features:
+### Future Features:
 - Add levels of difficulty.
 - Add a multiplayer option.
 - Add more graphics and possibly a background image instead of a plain background.
 
 -----
 
-## Technologies Used:
+## **Technologies Used:**
 ### Main Language:
 - Python
 
@@ -112,7 +137,7 @@ Files containing HTML, CSS and JavaScript were all provided by Code Institute fo
 
 -----
 
-## Testing:
+## **Testing:**
 ### Manual Testing:
 This project has been tested manually for the most part. Mostly by myself playing it over and over again to make sure the logic worked. Manual testing was also done for making sure I got necessary feedback while playing, and that the feedback was presented in a clear way.
 
@@ -145,7 +170,7 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 
 ------
 
-## Bugs:
+## **Bugs:**
 ### Solved:
 
 
@@ -154,10 +179,10 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 
 ----
 
-## Deployment:
+## **Deployment:**
 - This application is deployed using Heroku. [link]
 
 
 
 ----
-## Credits:
+## **Credits:**

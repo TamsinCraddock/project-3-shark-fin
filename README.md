@@ -1,4 +1,4 @@
-# Shark Fin
+# **Shark Fin**
 
 Shark Fin is a word challenge game. A simple game that is played in the command line. 
 
@@ -8,11 +8,18 @@ The aim of the game is to guess a random word by entering one letter at a time. 
 
 The game concept is simple, but it is a challenging game. It's a great way to sit back, relax and challenge yourself. Enjoy!
 
-[image]
+[image - responsiveness]
+
+
+---
 
 
 ## Contents:
+- User Experience:
+- User Requirements
+- 
 
+----
 
 ## User Experience:
 ### User requirements:
@@ -35,10 +42,11 @@ The game concept is simple, but it is a challenging game. It's a great way to si
 - The player loses if the lives runs out. A message will show to tell the game is over.
 - When the game is finished the player can choose to restart, or otherwise return to the starting screen.
 
-### Wireframes/ Flowhart:
+### Wireframes/ Flowchart:
 As this game only is played in the terminal, no wireframes for the visual was done before the project started. I did a simple flowchart to guide me through the coding and to get a map for how I wanted it to work.
 
-[image]
+![Shark Fin game plan flow chart](assets/images/sharkfin-flow-chart.jpg)
+
 
 ### Design:
 The design is very limited in this because it's played through the terminal. I have put some color and ASCII-art in it to make it look more appealing. This also helps with the feedback as the text is in different color for when you guess right or wrong for example.
@@ -110,8 +118,46 @@ This project has been tested manually for the most part. Mostly by myself playin
 
 I also asked two friends to test the game to get an outside opinion on the functionality and the flo of the game.
 
+### Input Validation:
+- When entering your name in the start it validates that it is only letters entered.
+
+[image]
+
+- When choosing 1 or 2 in the meny it validates that, if you put something else in it will tell you that you need to choose 1 or 2.
+
+[image]
+
+- When guessing letters it validates that the input is one letter and nothing else.
+
+[image]
+
+- If you guess same letter twice you will be notified and will be able to try again.
+
+[image]
+
+### Validator Testing:
+The code has been tested with PEP8 online. At first there were some warnings about trailing whitespaces and too long lines. But now it passes without any warnings or errors.
+
+[link]
+[image]
+
+- Lighthouse testing essential???
+
+------
+
+## Bugs:
+### Solved:
+
+
+### Left to solve:
+
+
+----
+
+## Deployment:
+- This application is deployed using Heroku. [link]
 
 
 
-
- 
+----
+## Credits:

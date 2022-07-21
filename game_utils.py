@@ -67,7 +67,7 @@ def get_list_of_words():
     file_path = "words.csv"
     words = []
     try:
-        with open(file_path) as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             for line in file:
                 words.append(line.rstrip("\n"))
     except OSError as error:

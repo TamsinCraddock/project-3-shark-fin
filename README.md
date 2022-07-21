@@ -83,12 +83,12 @@ The design is very limited in this because it's played through the terminal. I h
 #### Start: 
 When you start the game you will be able to enter your name. This is for personal feedback through the game.
 
- [image]
+ ![Shark Fin game start](assets/shark-fin-game-start.png)
 
  #### Menu: 
  In the next step you have two choices. Start the game or read the rules.
 
- [image]
+ ![Shark Fin game menu](assets/shark-fin-game-menu.png)
 
  #### Rules of the game:
  A short explanation of the rules and stes of the game with the possibility to return to the main menu by hitting enter.

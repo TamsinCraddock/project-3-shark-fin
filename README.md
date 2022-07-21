@@ -25,7 +25,7 @@ The game concept is simple, but it is a challenging game. It's a great way to si
 - [Features:](#features)
     - [Existing Features:](#existing-features)
         - Start
-        - Menu:
+        - Menu
         - Rules of the game
         - Playing the game
         - Guessing the same letter
@@ -122,23 +122,26 @@ Rules of the game:
  ![Shark Fin game rules](assets/images/shar-fin-game-rules.png)
 
  #### Playing the game:
- - When playing the game you receive feedback in green when the guess is correct. Along with the letter in the correct position.
+ - When playing the game, the letter guessed will be placed on the blank tile/s where relevant when the guess is correct. 
 
-[image]
+![Shark Fin correct guess display](assets/images/shark-fin-correct-guess.png)
 
 - If you guess wrong, it will notify you in red text along with a graphic of the shark fin moving closer to the swimming person.
 
-[image]
+![Shark Fin incorrect guess](assets/images/shark-fin-incorrect%20guess.png)
 
 #### Guessing the same letter:
 
 - If you guess same letter more than once you will be notified in yellow text. No lives is withdrawn and you can try again.
 
-[image]
+![Shark Fin same letter guessed warning message](assets/images/shark-fin-same-letter-guessed-warning.png)
 
 #### End of game:
 - When game is finished you will be greeted with different graphics depending if you win or loose.
-- You can choose if you want to play again or return to main screen.
+
+![Shark Fin win message](assets/images/shark-fin-win-message.png)
+
+![Shark Fin lose message](assets/images/shark-fin-you-lose.png)
 
 ### Future Features:
 - Add levels of difficulty.
@@ -189,7 +192,6 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 [link]
 [image]
 
-- Lighthouse testing essential???
 
 ------
 
@@ -205,8 +207,6 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 ## **Deployment:**
 - This application is deployed using Heroku. 
     https://shark-fin.herokuapp.com/
-
-
 
 
 ----

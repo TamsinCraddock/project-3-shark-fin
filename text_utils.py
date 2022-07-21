@@ -31,9 +31,14 @@ def print_rules():
     Displays the game rules
     """
     print("""
-1. rule 1 here
-2. good luck    
-
+1. The game will automatically generate a random word.
+2. The amount of letters that the word contains is shown by the amount of blank tiles.
+3. Guess one letter in each turn.
+4. If you guess a correct letter that the word contains, the letter will display on the relevant tiles within the word.
+5. If the guess is correct, the shark will remain in the same position and you can guess another letter.
+6. If the guess is incorrect, the shark fin will move one step closer to the swimming person.
+7. Once the shark fin reaches the swimming person, you lose.
+8. Good luck!
     """)
 
 

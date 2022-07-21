@@ -186,3 +186,6 @@ The code has been tested with PEP8 online. At first there were some warnings abo
 
 ----
 ## **Credits:**
+- The Shark Fin game logo was generated using https://patorjk.com/
+
+

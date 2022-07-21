@@ -170,9 +170,6 @@ This project has been tested manually for the most part. Mostly by myself playin
 I also asked two friends to test the game to get an outside opinion on the functionality and the flo of the game.
 
 ### Input Validation:
-- When entering your name in the start it validates that it is only letters entered.
-
-[image]
 
 - When choosing 1 or 2 in the menu, it validates that the user entered a valid input. If you put something else in it will tell you that you need to choose 1 or 2.
 
@@ -187,20 +184,28 @@ I also asked two friends to test the game to get an outside opinion on the funct
 ![Shark Fin letter already guessed warning](assets/images/shark-fin-letter-already-guessed.png)
 
 ### Validator Testing:
-The code has been tested with PEP8 online. At first there were some warnings about trailing whitespaces and too long lines. But now it passes without any warnings or errors.
+The code has been tested with [PEP8](http://pep8online.com/) online. 
 
-[link]
-[image]
+Initially I obtained a large number of "line too long" errors & "trailing whitespace" errors.
 
+![PEP8 errors](assets/images/text-utils-errors-1.png)
+![PEP8 errors 2](assets/images/text-utils-errors-2.png)
+
+I spent some time adjusting the code so that the lines were shorter than 80 characters and was able to adjust the ASCII art without affecting the way it displayed. The code then passed through the validator successfully:
 
 ------
 
 ## **Bugs:**
 ### Solved:
+- Incorrect colour output for valid data inputs.
+- Words pulled from the words.csv included new line.
+- Exit key stopped working after adding 'try again'option.
+- Shark Fin Ascii art was displaying a duplicate of the same picture at times in the terminal. This was caused by an 'if' instead of using 'elif'.
+- 
 
 
 ### Left to solve:
-
+To the best of my knowledge, the program does not have any current bugs.
 
 ----
 

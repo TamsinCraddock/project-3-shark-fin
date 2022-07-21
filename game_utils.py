@@ -4,7 +4,12 @@ Set of utils to control game flow
 """
 
 import re
-from text_utils import display_shark_fin, print_invalid_input, print_already_guessed
+from text_utils import (
+    display_shark_fin,
+    print_invalid_input,
+    print_already_guessed,
+    print_incorrect
+)
 TRIES_ALLOWED = 5
 
 
@@ -24,7 +29,7 @@ def game(word):
     win = False
     guesses = set()
     while not done:
-        print(f"{prompt}\n")
+        print(f"{' '.join(prompt)}\n")
         raw_guess = input("Enter a guess: ").lower()
         if not len(raw_guess) == 1 or not raw_guess[0].isalpha():
             print_invalid_input()
@@ -37,7 +42,7 @@ def game(word):
         indices = [i.start() for i in re.finditer(guess, tempword)]
         if len(indices) < 1:
             tries = tries + 1
-            print(f"Incorrect, try again - {TRIES_ALLOWED - tries} remaining")
+            print_incorrect(TRIES_ALLOWED - tries)
             display_shark_fin(tries)
             if tries >= TRIES_ALLOWED:
                 done = True

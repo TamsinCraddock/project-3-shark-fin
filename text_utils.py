@@ -44,14 +44,23 @@ def print_rules():
 
 
 def print_incorrect(tries_left):
+    '''
+    print incorrect message in red
+    '''
     cprint(f"\nIncorrect, try again - {tries_left} remaining\n", "red")
 
 
 def print_already_guessed():
+    '''
+    print already guessed message in yellow
+    '''
     cprint("\nAlready guessed, try again\n", "yellow")
 
 
 def print_invalid_input():
+    '''
+    prints the invalid input message in yellow
+    '''
     cprint("\ninvalid input, please enter a single letter\n", "yellow")
 
 
@@ -81,14 +90,14 @@ def print_game_over(name, word, win=False):
 
 
 
-     /$$     /$$                        /$$                                     /$$
-    |  $$   /$$/                       | $$                                    | $$
-     \  $$ /$$//$$$$$$  /$$   /$$      | $$        /$$$$$$   /$$$$$$$  /$$$$$$ | $$
-      \  $$$$//$$__  $$| $$  | $$      | $$       /$$__  $$ /$$_____/ /$$__  $$| $$
-       \  $$/| $$  \ $$| $$  | $$      | $$      | $$  \ $$|  $$$$$$ | $$$$$$$$|__/
-        | $$ | $$  | $$| $$  | $$      | $$      | $$  | $$ \____  $$| $$_____/    
-        | $$ |  $$$$$$/|  $$$$$$/      | $$$$$$$$|  $$$$$$/ /$$$$$$$/|  $$$$$$$ /$$
-        |__/  \______/  \______/       |________/ \______/ |_______/  \_______/|__/
+ /$$     /$$                        /$$                                     /$$
+|  $$   /$$/                       | $$                                    | $$
+ \  $$ /$$//$$$$$$  /$$   /$$      | $$        /$$$$$$   /$$$$$$$  /$$$$$$ | $$
+  \  $$$$//$$__  $$| $$  | $$      | $$       /$$__  $$ /$$_____/ /$$__  $$| $$
+   \  $$/| $$  \ $$| $$  | $$      | $$      | $$  \ $$|  $$$$$$ | $$$$$$$$|__/
+    | $$ | $$  | $$| $$  | $$      | $$      | $$  | $$ \____  $$| $$_____/    
+    | $$ |  $$$$$$/|  $$$$$$/      | $$$$$$$$|  $$$$$$/ /$$$$$$$/|  $$$$$$$ /$$
+    |__/  \______/  \______/       |________/ \______/ |_______/  \_______/|__/
 
 
             """, 'red')

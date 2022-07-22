@@ -113,7 +113,7 @@ def print_game_over(name, word, win=False):
 
 def display_shark_fin(step=1):
     """
-    Displays the shark fin moving towards the victim
+    Displays the shark fin moving towards the swimming person
     """
     if step == 2:
         print("""

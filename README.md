@@ -10,9 +10,7 @@ The game concept is simple, but it is a challenging game. It's a great way to si
 
 ![Shark Fin game display](assets/images/shark-fin-responsiveness-layout.png)
 
-
 ---
-
 
 ## **Contents:**
 - [User Experience:](#user-experience)
@@ -82,12 +80,10 @@ As this game only is played in the terminal, no wireframes for the visual was do
 
 ![Shark Fin game plan flow chart](assets/images/sharkfin-flow-chart.jpg)
 
-
 ## **Design:**
 The program has been designed based on the five planes of content strategy. Although it is a terminal application and therefore differs somewhat from web design, each plane still applies in some way.
 
 The design is very limited due to the game being played through the terminal. I have put some color and ASCII-art in it to add to the overall design and user experience. This also helps with the user feedback as the text colour used changes dependingon the game output.
-
 
 ## **Features:**
 ### Existing Features:
@@ -98,10 +94,10 @@ When you start the game you will be able to enter your name. This is for persona
  ![Shark Fin game start](assets/images/shark-fin-game-start.png)
 
  #### Menu: 
- In the next step you have three choices:
- 1. Rules
- 2. Start Game
- 0. Exit
+ In the next step you have three choices: \
+ 1 . Rules \
+ 2 . Start Game \
+ 0 . Exit
 
  ![Shark Fin game menu](assets/images/shark-fin-game-menu.png)
 
@@ -117,7 +113,6 @@ Rules of the game:
 6. If the guess is incorrect, the shark fin will move one step closer to the swimming person.
 7. Once the shark fin reaches the swimming person, you lose.
 8. Good luck!
-
 
  ![Shark Fin game rules](assets/images/shar-fin-game-rules.png)
 
@@ -191,9 +186,13 @@ Initially I obtained a large number of "line too long" errors & "trailing whites
 ![PEP8 errors](assets/images/text-utils-errors-1.png)
 ![PEP8 errors 2](assets/images/text-utils-errors-2.png)
 
-I spent some time adjusting the code so that the lines were shorter than 80 characters and was able to adjust the ASCII art without affecting the way it displayed. The code then passed through the validator successfully.
+I spent some time adjusting the code so that the lines were shorter than 80 characters and was able to adjust the ASCII art without affecting the way it displayed. 
+
+The code then passed through the validator successfully.
 
 The validator also highlighted use of anomylous backslashes in the ascii art, as they were not valid escape sequences.  This was fixed by prefixing the strings with 'r' to ignore escape sequences.
+
+![PEP8 initial errors](assets/images/text-utils-no-errors.png)
 
 ------
 
@@ -203,8 +202,9 @@ The validator also highlighted use of anomylous backslashes in the ascii art, as
 - Words pulled from the words.csv included new line.
 - Exit key stopped working after adding 'try again'option.
 - Shark Fin Ascii art was displaying a duplicate of the same picture at times in the terminal. This was caused by an 'if' instead of using 'elif'.
-- 
-
+- Ascii art was too long to display correctly - this had to be manually adjusted.
+- The word space placeholders were displaying too closely togethe, making it look like one single line.
+- The letter already chosen feature wasn't running correctly initially.
 
 ### Left to solve:
 To the best of my knowledge, the program does not have any current bugs.
@@ -223,6 +223,4 @@ To the best of my knowledge, the program does not have any current bugs.
 - The flowchart diagram for the game functionality was drawn using https://app.diagrams.net/ 
 - The colour library used is from Termcolor 1.1.0 https://pypi.org/project/termcolor/
 - Github used for source control https://github.com/
-
-
-
+- The [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template) on GitHub was used to develop this project. This template was designed by [Code Institute](https://codeinstitute.net/ie/) to provide a terminal that can be viewed in the browser.
